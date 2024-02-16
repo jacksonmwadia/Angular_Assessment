@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/ProjectManagementSystem/Front end- ts/USER/login.css" />
+    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -11,28 +12,36 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>Login</title>
+    <link rel="stylesheet" href="/ProjectManagementSystem/USER/registration.css">
+    <title>Document</title>
   </head>
   <body>
     <div class="login-container">
       <div class="image">
         <img
-          src="/ProjectManagementSystem/Front end- ts/Assets/Cloud-Based-Project-Management-Software.jpg"
+          src="https://img.freepik.com/free-photo/side-view-businesswoman-showing-analytical-charts-her-male-coworker_1098-20620.jpg?w=900&t=st=1708108098~exp=1708108698~hmac=a03bd85041c0a8080ee5d7154e1f17b2de02e420bbccb52d208bb5bbcb05ddce"
           alt=""
           style="width: 100%; height: 100%"
         />
       </div>
       <div class="formcontainer">
-        <h2>Login to your account</h2>
-        <form action="">
-          <label for="username">Username:</label><br />
-          <input type="text" id="username" required /><br />
+        <h2>Register to your account</h2>
+        <form  [formGroup]="loginForm" (ngSubmit)="loginUser">
+         <!--  <label for="username">First Name:</label><br />
+          <input type="text" formControlName="username"  required /><br />
+          <label for="lastname">Last Name:</label><br />
+          <input type="text" formControlName="lastname"  required /><br />
+           -->
+          <label for="email">Email:</label><br />
+          <input type="text" formControlName="email"  required /><br />
+
 
           <label for="password">Password:</label><br />
-          <input type="password" id="password" required /><br />
-          <button type="submit"> <a href="/ProjectManagementSystem/Front end- ts/USER/userdash.html" style="color: white;"  > Login</a> </button><br />
-          <a href="/ProjectManagementSystem/Front end- ts/USER/forgetPassword.html">Forgot password</a>
-          <a href="/ProjectManagementSystem/Front end- ts/USER/registration.html">Create Account</a>
+          <input type="password" formControlName="password" required /><br />
+          
+
+          <button type="submit">Sign Up</button><br />
+                           Login
         </form>
       </div>
     </div>

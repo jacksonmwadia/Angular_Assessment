@@ -8,11 +8,13 @@ import { register } from 'module';
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [NavbarComponent, CommonModule,],
+  imports: [NavbarComponent, CommonModule,ReactiveFormsModule],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css',
 })
 
 export class RegisterComponent{
   title='register'
+
+ 
 }
