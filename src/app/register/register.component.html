@@ -1,38 +1,51 @@
-<app-navbar></app-navbar>
- 
-<div class="register flex justify-center">
-    <form [formGroup]="registerForm" (ngSubmit)="registerUser()" class="w-[40vw]  p-4 rounded shadow">
-        <div><h2 class="font-bold text-center">{{title}}</h2></div>
-        <div class="mb-4 flex flex-col">
-            <label class="mb-2">Full name</label>
-            <input type="text" formControlName="name" class="p-2 rounded shadow border" id="">
-            <div *ngIf="registerForm.get('name')?.invalid && registerForm.get('name')?.touched" class="text-sm text-red-500 mt-[3px]">Name is required</div>
-        </div>
-        <div class="mb-4 flex flex-col">
-            <label class="mb-2">Email</label>
-            <input type="email" formControlName="email" class="p-2 rounded shadow border" id="">
-            <div *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched && !registerForm.get('email')?.dirty" class="text-sm text-red-500 mt-[3px]">Email is required</div>
-            <div *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched && registerForm.get('email')?.dirty" class="text-sm text-red-500 mt-[3px]">Invalid format</div>
-        </div>
-        <div class="mb-4 flex flex-col">
-            <label class="mb-2">Phone number</label>
-            <input type="text" formControlName="phone_number" class="p-2 rounded shadow border" id="">
-            <div *ngIf="registerForm.get('phone_number')?.invalid && registerForm.get('phone_number')?.touched" class="text-sm text-red-500 mt-[3px]">Phone number is required</div>
-        </div>
-        <div class="mb-4 flex flex-col">
-            <label class="mb-2">Address</label>
-            <input type="text" formControlName="location" class="p-2 rounded shadow border" id="">
-            <div *ngIf="registerForm.get('location')?.invalid && registerForm.get('location')?.touched" class="text-sm text-red-500 mt-[3px]">Address is required</div>
-        </div>
-        <div class="mb-4 flex flex-col">
-            <label class="mb-2">Password</label>
-            <input type="password" formControlName="password" class="p-2 rounded shadow border" id="">
-            <div *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched" class="text-sm text-red-500 mt-[3px]">Password is required</div>
-            <div *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched && !registerForm.get('password')?.dirty" class="text-sm text-red-500 mt-[3px]">Must have letters </div>
-        </div>
-        <div class="mb-4 flex items-center justify-between"> 
-            <input type="submit" [disabled]="registerForm.invalid" class="w-[150px] max-w-[150px] p-2 rounded shadow border bg-blue-500 text-white font-bold cursor-pointer" value="Create Account">
-            <a class="text-blue-500 hover:text-blue-700 cursor-pointer">Proceed to login?</a> 
-        </div>
-    </form>
-</div>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/ProjectManagementSystem/USER/registration.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="image">
+        <img
+          src="/ProjectManagementSystem/Assets/Cloud-Based-Project-Management-Software.jpg"
+          alt=""
+          style="width: 100%; height: 100%"
+        />
+      </div>
+      <div class="formcontainer">
+        <h2>Register to your account</h2>
+        <form action="">
+          <label for="username">First Name:</label><br />
+          <input type="text" id="firstname" required /><br />
+          <label for="username">Last Name:</label><br />
+          <input type="text" id="lastName" required /><br />
+          <label for="username">Username:</label><br />
+          <input type="text" id="username" required /><br />
+          <label for="username">Email:</label><br />
+          <input type="text" id="email" required /><br />
+
+
+          <label for="password">Password:</label><br />
+          <input type="password" id="password" required /><br />
+          <label for="username">Area of specilization:</label><br />
+          <input type="text" id="specilization" required /><br />
+
+          <button type="submit">Sign Up</button><br />
+          <a href="/ProjectManagementSystem/USER/login.html">Login</a>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
-import { loginDetails } from '../../interfaces/login.interfaces';
+// import { loginDetails } from '../../interfaces/login.interfaces';
 import { Router, RouterLink } from '@angular/router';
-import { AuthService } from '../../services/auth.service';
+// import { AuthService } from '../../services/auth.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -14,5 +14,5 @@ import { CommonModule } from '@angular/common';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-
+                
 }
